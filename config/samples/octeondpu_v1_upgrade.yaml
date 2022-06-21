@@ -1,0 +1,6 @@
+apiVersion: octeondpu.marvell.com/v1
+kind: Upgrade
+metadata:
+  name: upgrade-sample
+spec:
+  release: "2022-06-02"

@@ -1,0 +1,24 @@
+# permissions for end users to edit upgrades.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: upgrade-editor-role
+rules:
+- apiGroups:
+  - octeondpu.marvell.com
+  resources:
+  - upgrades
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - octeondpu.marvell.com
+  resources:
+  - upgrades/status
+  verbs:
+  - get
